@@ -1,7 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Epilogue", sans-serif;
+  position: relative;
+  background-color: hsl(0, 0%, 98%);
+}
+.darken {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  /* background-color: rgba(0, 0, 0, 0.3); */
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9vh;
+  padding: 0 1rem;
+  position: relative;
+}
+.icon-burger {
+  cursor: pointer;
+}
+/* Nav Links */
+.nav-links {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: hsl(0, 0%, 98%);
+  height: 89vh;
+  width: 65%;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+}
+.nav-links.active {
+  transform: translateX(0);
+}
+.nav-link-container {
+  display: flex;
+  flex-direction: column;
+}
+.nav-link-container span {
+  display: flex;
+  align-items: center;
+}
+.nav-link {
+  padding: 0.7rem 1rem;
+  list-style: none;
+  color: hsl(0, 0%, 41%);
+}
+.nav-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+.login-btn,
+.register-btn {
+  text-decoration: none;
+  color: hsl(0, 0%, 41%);
+  padding: 0.7rem 0;
+}
+.register-btn {
+  border: 2px solid hsl(0, 0%, 41%);
+  border-radius: 10px;
+  width: 80%;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Nav Dropdowns */
+.nav-link-container {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.nav-link-container span {
+  display: flex;
+  align-items: center;
+}
+.features-dropdown,
+.company-dropdown {
+  margin-left: 1.5rem;
+  display: none;
+  height: 0;
+}
+.features-dropdown.active,
+.company-dropdown.active {
+  height: auto;
+  display: inline-block;
+}
+.dropdown-task {
+  display: flex;
+  padding: 0.7rem;
+  color: hsl(0, 0%, 41%);
+}
+.features-icon {
+  margin-right: 0.5rem;
+}
+
+/* Hero */
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 91vh;
+}
+.hero-img {
+  width: 100%;
+  object-fit: contain;
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-h1 {
+  margin: 3rem 0 1rem 0;
+  font-size: 2.2rem;
+}
+.hero-p {
+  color: hsl(0, 0%, 41%);
+  line-height: 1.7;
+  width: 90%;
+}
+.hero-btn {
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  margin: 1.5rem 0 3rem 0;
+}
+
+/* Hero Logos */
+.hero-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
+}
+.client-logo {
+  height: 15px;
+}
+.audiophile {
+  height: 25px;
 }

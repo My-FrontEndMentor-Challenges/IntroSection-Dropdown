@@ -4,11 +4,131 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png" />
+    <title>Intro With Dropdown</title>
     <link rel="stylesheet" href="style.css" />
     <script src="app.js" defer></script>
   </head>
   <body>
-    <h1></h1>
+    <div class="darken"></div>
+    <!-- Nav -->
+    <nav class="nav">
+      <img src="images/logo.svg" alt="snap text bolded" />
+      <img
+        src="images/icon-menu.svg"
+        alt="3 solid lines stacked horizontally"
+        class="icon-burger"
+      />
+      <ul class="nav-links">
+        <div class="nav-link-container">
+          <span class="features-container">
+            <li class="nav-link">Features</li>
+            <img
+              src="images/icon-arrow-down.svg"
+              alt="down arrow"
+              class="features-arrow"
+            />
+          </span>
+          <ul class="features-dropdown">
+            <li class="dropdown-task">
+              <img
+                src="images/icon-todo.svg"
+                alt="todo icon"
+                class="features-icon"
+              />
+              <p>Todo List</p>
+            </li>
+            <li class="dropdown-task">
+              <img
+                src="images/icon-calendar.svg"
+                alt="calendar icon"
+                class="features-icon"
+              />
+              <p>Calendar</p>
+            </li>
+            <li class="dropdown-task">
+              <img
+                src="images/icon-reminders.svg"
+                alt="bell icon"
+                class="features-icon"
+              />
+              <p>Reminders</p>
+            </li>
+            <li class="dropdown-task">
+              <img
+                src="images/icon-planning.svg"
+                alt="clock icon"
+                class="features-icon"
+              />
+              <p>Planning</p>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-link-container">
+          <span class="company-container">
+            <li class="nav-link">Company</li>
+            <img
+              src="images/icon-arrow-down.svg"
+              alt="down arrow"
+              class="company-arrow"
+            />
+          </span>
+          <ul class="company-dropdown">
+            <li class="dropdown-task company-task">History</li>
+            <li class="dropdown-task company-task">Our Team</li>
+            <li class="dropdown-task company-task">Blog</li>
+          </ul>
+        </div>
+        <li class="nav-link">Careers</li>
+        <li class="nav-link">About</li>
+        <div class="nav-btns">
+          <a href="#" class="login-btn">Login</a>
+          <a href="#" class="register-btn">Register</a>
+        </div>
+      </ul>
+    </nav>
+    <!-- Hero -->
+    <div class="hero-container">
+      <div class="darken"></div>
+      <img
+        src="images/image-hero-mobile.png"
+        alt="man holding laptop with logos around him"
+        class="hero-img"
+      />
+      <!-- Hero Text -->
+      <div class="hero-text">
+        <h1 class="hero-h1">Make remote work</h1>
+        <p class="hero-p">
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <!-- Hero Btn -->
+        <a href="#" class="hero-btn">Learn more</a>
+      </div>
+      <!-- Hero Logos -->
+      <div class="hero-logos">
+        <img
+          src="images/client-databiz.svg"
+          alt="databiz client logo"
+          class="client-logo"
+        />
+        <img
+          src="images/client-audiophile.svg"
+          alt="audiophile client logo"
+          class="client-logo audiophile"
+        />
+        <img
+          src="images/client-meet.svg"
+          alt="meet client logo"
+          class="client-logo"
+        />
+        <img
+          src="images/client-maker.svg"
+          alt="maker client logo"
+          class="client-logo"
+        />
+      </div>
+    </div>
   </body>
 </html>
