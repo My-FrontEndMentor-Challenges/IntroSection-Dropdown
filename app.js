@@ -1,14 +1,17 @@
 "use strict";
-const navLinks = document.querySelector(".nav-links");
+const navLinks = document.querySelector(".nav-links-container");
 const burgerIcon = document.querySelector(".icon-burger");
+const darken = document.querySelector(".darken");
 
 burgerIcon.addEventListener("click", () => {
   if (navLinks.classList.contains("active")) {
     burgerIcon.src = "images/icon-menu.svg";
     navLinks.classList.remove("active");
+    darken.classList.remove("active");
   } else {
     burgerIcon.src = "images/icon-close-menu.svg";
     navLinks.classList.add("active");
+    darken.classList.add("active");
   }
 });
 const featuresDropdown = document.querySelector(".features-dropdown");
