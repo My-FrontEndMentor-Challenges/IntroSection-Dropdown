@@ -12,15 +12,18 @@ body {
   min-height: 100vh;
   font-family: "Epilogue", sans-serif;
   position: relative;
+  overflow-x: hidden;
 }
 .darken {
   position: absolute;
   height: 100vh;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.7);
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
+  top: 0;
+  left: 0;
 }
 .darken.active {
   opacity: 1;
@@ -132,6 +135,9 @@ body {
   width: 100%;
   object-fit: contain;
 }
+.desktop-hero-img {
+  display: none;
+}
 .hero-text {
   display: flex;
   flex-direction: column;
@@ -153,6 +159,7 @@ body {
   padding: 1rem 1.5rem;
   border-radius: 15px;
   margin: 1.5rem 0 3rem 0;
+  border: 1px solid hsl(0, 0%, 8%);
 }
 
 /* Hero Logos */
@@ -168,4 +175,127 @@ body {
 }
 .audiophile {
   height: 25px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 1024px) {
+  /* Nav */
+  .icon-burger {
+    display: none;
+  }
+  .nav-links-container {
+    position: static;
+    display: flex;
+    transform: translateX(0);
+    height: auto;
+    flex: 1;
+    background-color: transparent;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: static;
+    width: 100%;
+    margin-left: 2rem;
+  }
+  .nav-link {
+    margin-left: 2rem;
+  }
+  .nav-link:hover {
+    color: hsl(0, 0%, 8%);
+    cursor: pointer;
+  }
+  .nav-btns {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 0;
+    flex: 1;
+  }
+  .login-btn,
+  .register-btn {
+    padding: 0.7rem 1rem;
+  }
+  .login-btn:hover,
+  .register-btn:hover {
+    color: hsl(0, 0%, 8%);
+    cursor: pointer;
+  }
+  .register-btn {
+    width: auto;
+    margin: 0 2rem 0 1rem;
+  }
+  .company-container,
+  .features-container {
+    position: relative;
+  }
+  .features-dropdown,
+  .company-dropdown {
+    margin-left: 0;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: hsl(0, 0%, 98%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 0.5rem;
+  }
+  .features-icon {
+    margin-right: 1rem;
+  }
+  /* Hero */
+  .hero-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .mobile-hero-img {
+    display: none;
+  }
+  .desktop-hero-img {
+    display: inline-block;
+  }
+  .hero-img {
+    width: 50%;
+    height: 600px;
+  }
+  .hero-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 600px;
+  }
+  .hero-text {
+    text-align: left;
+    align-items: flex-start;
+    width: 70%;
+    margin-left: 4rem;
+  }
+  .hero-h1 {
+    font-size: 5rem;
+    display: flex;
+    flex-direction: column;
+    margin: 3.5rem 0 1.5rem 0;
+  }
+  .hero-p {
+    width: 70%;
+  }
+  .hero-btn {
+    margin: 3rem 0 0 0;
+  }
+  .hero-btn:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 8%);
+    transition: all 0.2s ease-in-out;
+  }
+  .hero-logos {
+    width: 65%;
+  }
+  .client-logo {
+    height: 20px;
+  }
+  .audiophile {
+    height: 30px;
+  }
 }
