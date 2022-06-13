@@ -132,7 +132,7 @@ body {
   height: 91vh;
 }
 .hero-img {
-  width: 100%;
+  width: 375px;
   object-fit: contain;
 }
 .desktop-hero-img {
@@ -150,7 +150,7 @@ body {
 .hero-p {
   color: hsl(0, 0%, 41%);
   line-height: 1.7;
-  width: 90%;
+  width: 350px;
 }
 .hero-btn {
   background-color: hsl(0, 0%, 8%);
@@ -167,7 +167,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 375px;
   padding: 0 1rem;
 }
 .client-logo {
